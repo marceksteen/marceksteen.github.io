@@ -1,10 +1,97 @@
 <!DOCTYPE html>
 <html>
-<body>
-    <div>
-        <h1>Hi</h1>
-        <h1>Hi</h1>
-    </div>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f6f3df;
+            }
+            #banner {
+                width: 80%; 
+                margin-left:10%;
+            }
+            .banner_text {
+                float:left;
+                margin-left:10%;
+                font-size:1.2em;
+                padding-bottom:10px;
+                padding-top:10px;
+                color:black;
+                text-decoration:none;
+            }
+            .banner_text:hover {
+                float:left;
+                margin-left:10%;
+                font-size:1.2em;
+                padding-bottom:10px;
+                padding-top:10px;
+                color:rgb(155, 137, 39);
+                text-decoration:none;
+            }
+            #banner_line {
+                background-color:rgb(49, 49, 49);
+                width:80%;
+                height:2px;
+                float:left;
+                margin-left:10%
+            }
+            #main {
+                width:80%;
+                float:left;
+                margin-left:10%;
+                background-color: white;
+            }
+            #main_text {
+                width:90%;
+                margin-left:5%;
+                margin-top:2em;
+                font-size:1.1em;
+            }
+            #home_banner_img {
+                width:100%;
+                margin-top:1em;
+            }
+            #gallery {
+                width: 90%;
+                margin-left:5%;
+            }
+            .gallery_image {
+                width:20em;
+                margin-left:2em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="banner">
+            <a class="banner_text" href="index.html">Home</a>
+            <a class="banner_text">Tutorials</a>
+            <a class="banner_text" href="https://medium.com/@marc.eksteen">Blog</a>
+            <a class="banner_text">Portfolio</a>
+        </div>
+        <div id="banner_line"></div>
+        <div id="main">
+            <img src="home_banner.jpg" alt="Outdoors" id="home_banner_img">
+            <div id="main_text">
+                <p>Hey, I'm Marc :) <br><br>
+                    My background is in mathematics and economics. I have experience working with applied mathematics and data science, although I am slowly
+                    moving towards teaching and education as a career. 
+                    I currently work in an educational capacity at the University of Queensland. In my free time I love painting, graphic design and writing.
+                    <br><br>
+                    Feel free to check out my:
+                    <br><br> - writing on <a href="https://medium.com/@marc.eksteen">Medium</a> <br> - paintings <br> - tutorials
+                    
+                    <br><br>
+                    If you'd like to get in touch, I'd love to hear from you on LinkedIn: <a href="https://www.linkedin.com/in/marc-eksteen-4a3345206/">my profile.</a></p>
+            </div>
+            <div id="gallery">
+                <h1>Gallery</h1>
+                <img src="resources/gallery/pendulum.gif" alt="image" class="gallery_image">
+                <img src="resources/gallery/sunset2.jpg" alt="image" class="gallery_image">
+                <img src="resources/gallery/wallaby.jpg" alt="image" class="gallery_image">
+                <img src="resources/gallery/dog.jpg" alt="image" class="gallery_image">
+                <img src="resources/gallery/jewellery.jpg" alt="image" class="gallery_image">
+                <img src="resources/gallery/sunset_stroll.jpg" alt="image" class="gallery_image">
+            </div>
+        </div>
+    </body>
 </html>
