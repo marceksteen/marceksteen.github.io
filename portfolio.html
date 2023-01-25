@@ -65,7 +65,12 @@
             }
             .gallery_image {
                 width:20em;
-                margin-left:2em;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+            }
+            .grid-item {
             }
         </style>
     </head>
@@ -81,37 +86,27 @@
         </div>
         <div class="banner_line"></div>
         <div id="main">
-            <img src="resources/home_banner.JPG" alt="Outdoors" id="home_banner_img">
             <div id="main_text">
-                <p>Hey, I'm Marc :) <br><br>
-                    This website is still in progress!
-                    <br><br>
-                    My background is in mathematics and economics. My main interests are: mathematical modelling, developmental economics, education and human and animal rights.
-                    <br><br>
-                    I currently work in an educational capacity at the University of Queensland. In my free time I love painting, writing and scuba diving :)
-                    <br><br>
-                    Feel free to check out my:
-                    <br><br> 
-                    &emsp;- writing on <a href="https://medium.com/@marc.eksteen">Medium</a> 
-                    <br> &emsp;- <a href="portfolio.html">paintings</a>  
-                    <br>&emsp;- <a href="portfolio.html">graphical work</a>  
-                    
-                    <br><br>
-                    If you'd like to get in touch, I'd love to hear from you on LinkedIn: <a href="https://www.linkedin.com/in/marc-eksteen-4a3345206/">my profile.</a>
-                    <br><br>
-                </p>
+                <h1>Portfolio</h1>
+                <p>This page is still in progress, but feel free to check out some of my work :) <br><br>
+                <h2>Mathematical</h2>
+                    <div class="grid-container">
+                        <div class="grid-item"><img src="resources/gallery/pendulum.gif" alt="image" class="gallery_image"></div>
+                        <div class="grid-item"><img src="resources/gallery/ml.gif" alt="image" class="gallery_image"></div>
+                    </div> 
+                <h2>Painting</h2>
+                    <div class="grid-container">
+                        <div class="grid-item"><img src="resources/gallery/sunset_stroll.JPG" alt="image" class="gallery_image"></div>
+                        <div class="grid-item"><img src="resources/gallery/dog.JPG" alt="image" class="gallery_image"></div>
+                        <div class="grid-item"><img src="resources/gallery/wallaby.JPG" alt="image" class="gallery_image"></div>
+                        <div class="grid-item"><img src="resources/gallery/sunset2.JPG" alt="image" class="gallery_image"></div>
+                    </div> 
+                <h2>Other artistic</h2>
+                    <div class="grid-container">
+                        <div class="grid-item"><img src="resources/gallery/jewellery.JPG" alt="image" class="gallery_image"></div>
+                    </div> 
             </div>
-            <div class="banner_line" style="width:90%;margin-left:5%;margin-bottom:1em;"></div>
-            <div id="gallery">
-                <h1>Gallery</h1>
-                <p>A sample of things I've done recently :)</p>
-                <img src="resources/gallery/pendulum.gif" alt="image" class="gallery_image">
-                <img src="resources/gallery/sunset2.JPG" alt="image" class="gallery_image">
-                <img src="resources/gallery/wallaby.JPG" alt="image" class="gallery_image">
-                <img src="resources/gallery/dog.JPG" alt="image" class="gallery_image">
-                <img src="resources/gallery/jewellery.JPG" alt="image" class="gallery_image">
-                <img src="resources/gallery/sunset_stroll.JPG" alt="image" class="gallery_image">
-            </div>
+            
         </div>
     </body>
 </html>
