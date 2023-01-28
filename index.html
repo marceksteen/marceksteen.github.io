@@ -214,7 +214,7 @@
             //spawn cars
             if (time - last_spawn_time > time_between_spawn) {
                 InstantiateCar();
-                time_between_spawn = Math.random()*10000+1000;
+                time_between_spawn = Math.random()*10000+3000;
                 last_spawn_time = time;
             }
 
