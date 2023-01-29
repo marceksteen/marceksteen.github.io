@@ -164,13 +164,18 @@
         }
 
         cars = [];
-        function Car(pos, speed) {
+        function Car(pos, speed, travel_ltr) {
             this.pos = pos;
             this.speed = speed;
+            this.travel_ltr = travel_ltr; //travel left to right
         }
 
         function InstantiateCar() {
-            cars.push(new Car(-100,1));
+            if (Math.random() < 0.5) {
+                cars.push(new Car(-100,1,true));
+            } else {
+                cars.push(new Car(c.width+100,1,false));
+            }
             return;
         }
 
@@ -197,12 +202,20 @@
                 delete_oldest_car = false;
                 for (i = 0; i < cars.length; i++) {
                     if (cars[i] != null) {
-                        new_pos = cars[i].pos + cars[i].speed;
-                        cars[i].pos = new_pos;
-                        ctx.drawImage(car,new_pos,0.68*c.height,0.8*c.height,0.3*c.height);
-                        if (new_pos >= c.width) {
-                            console.log('hi')
-                            delete_oldest_car = true;
+                        if (cars[i].travel_ltr) {
+                            new_pos = cars[i].pos + cars[i].speed;
+                            cars[i].pos = new_pos;
+                            ctx.drawImage(car,new_pos,0.68*c.height,0.8*c.height,0.3*c.height);
+                            if (new_pos >= c.width) {
+                                delete_oldest_car = true;
+                            }
+                        } else {
+                            new_pos = cars[i].pos - cars[i].speed;
+                            cars[i].pos = new_pos;
+                            ctx.drawImage(car,new_pos,0.68*c.height,0.8*c.height,0.3*c.height);
+                            if (new_pos <= -100) {
+                                delete_oldest_car = true;
+                            }
                         }
                     }
                 }
@@ -214,7 +227,7 @@
             //spawn cars
             if (time - last_spawn_time > time_between_spawn) {
                 InstantiateCar();
-                time_between_spawn = Math.random()*10000+3000;
+                time_between_spawn = Math.random()*20000+5000;
                 last_spawn_time = time;
             }
 
