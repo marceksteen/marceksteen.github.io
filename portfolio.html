@@ -1,112 +1,85 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="stylesheet.css">
         <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f7f5eb;
-            }
-            #top_banner {
-                font-size:2.5em;
-                text-align:center;
-                padding:0px;
-            }
-            #top_banner p {
-                margin:0.25em;
-            }
-            #banner {
-                width: 80%; 
-                margin-left:10%;
-            }
-            .banner_text {
-                float:left;
-                margin-left:10%;
-                font-size:1.2em;
-                padding-bottom:10px;
-                padding-top:10px;
-                color:rgb(69, 69, 69);
-                text-decoration:none;
-            }
-            .banner_text:hover {
-                float:left;
-                margin-left:10%;
-                font-size:1.2em;
-                padding-bottom:10px;
-                padding-top:10px;
-                color:rgb(155, 137, 39);
-                text-decoration:none;
-            }
-            .banner_line {
-                background-color:rgb(49, 49, 49);
-                width:80%;
-                height:0.05em;
-                float:left;
-                margin-left:10%
-            }
-            #main {
-                width:80%;
-                float:left;
-                margin-left:10%;
-                background-color: white;
-            }
-            #main_text {
-                width:90%;
-                margin-left:5%;
-                margin-top:2em;
-                font-size:1.1em;
-            }
-            #home_banner_img {
-                width:100%;
-                margin-top:1em;
-            }
-            #gallery {
-                width: 90%;
-                margin-left:5%;
-            }
-            .gallery_image {
-                width:25vw;
-            }
             .grid-container {
                 display: grid;
                 grid-template-columns: auto auto auto;
             }
             .grid-item {
             }
+            .gallery_image {
+                width:90%;
+                margin-left:10%;
+                margin-left:2em;
+            }
         </style>
     </head>
-    <body>
+    <body onload = "init();">
         <div id="top_banner">
-            <p>Marc Eksteen</p>
+            <canvas id = "background_canvas" width = "100" height = "100"></canvas>
+            <img src="resources/city_banner.PNG" id="city_banner">
+            <canvas id = "active_canvas" width = "100" height = "100"></canvas>
         </div>
-        <div class="banner_line"></div>
         <div id="banner">
             <a class="banner_text" href="index.html">Home</a>
-            <a class="banner_text" href="https://medium.com/@marc.eksteen">Medium</a>
             <a class="banner_text" href="portfolio.html">Portfolio</a>
+            <a class="banner_text" href="https://medium.com/@marc.eksteen">Medium</a>
         </div>
         <div class="banner_line"></div>
         <div id="main">
             <div id="main_text">
                 <h1>Portfolio</h1>
                 <p>This page is still a work in progress, but feel free to check out some of my work :) <br><br>
-                <h2>Mathematical</h2>
+                Here are the categories on this page: <br><br>
+                &emsp;- <a href="#Simulation">Simulation & Modelling</a> <br>
+                &emsp;- <a href="#Writing">Writing</a> <br>
+                &emsp;- <a href="#Paintings">Paintings</a> <br>
+                &emsp;- <a href="#Other artistic">Other artistic</a> <br>
+                </p>
+                <div class="banner_line" style="width:95%;margin-left:2.5%;margin-bottom:1em;margin-top:1em;"></div>
+                <h2 id="Simulation">Simulation</h2>
                     <div class="grid-container">
                         <div class="grid-item"><img src="resources/gallery/pendulum.gif" alt="image" class="gallery_image"></div>
                         <div class="grid-item"><img src="resources/gallery/ml.gif" alt="image" class="gallery_image"></div>
+                        <div class="grid-item"><img src="resources/gallery/monty.png" alt="image" class="gallery_image"></div>
                     </div> 
-                <h2>Painting</h2>
+                <div class="banner_line" style="width:95%;margin-left:2.5%;margin-bottom:1em;margin-top:1em;"></div>
+                <h2 id="Writing">Writing</h2>
+                <h4>Mathematics, Stats & Computing</h4>
+                <p>
+                    &emsp;-> <a href="https://medium.com/@marc.eksteen/beautifully-simple-mathematics-for-everyday-life-455e29018c21">Beautifully simple mathematics for everyday life</a> <br>
+                    &emsp;-> <a href="https://medium.com/@marc.eksteen/we-are-coding-humans-out-of-existence-500635150bc0">We may be coding humans out of existence</a> <br>
+                    &emsp;-> <a href="https://medium.com/@marc.eksteen/a-fiendish-little-probability-problem-4404dbd3629">A fiendish little probability problem</a> <br>
+                    &emsp;-> <a href="https://medium.com/@marc.eksteen/do-you-understand-middle-school-maths-a4ef340291d8">School math revisited</a> <br>
+                </p>
+                <h4>Economics / Science</h4>
+                <p>
+                    &emsp;-> <a href="https://medium.com/@marc.eksteen/your-brain-is-biased-602d28f052bc">Your brain is biased</a> <br>
+                </p>
+                <h4>Life</h4>
+                <p>
+                    &emsp;-> <a href="https://medium.com/@marc.eksteen/what-are-your-blindspots-64520c35270">What are your blindspots?</a> <br>
+                    &emsp;-> <a href="https://medium.com/@marc.eksteen/something-im-genuinely-proud-of-d778b31b750d">Change</a> <br>
+                </p>
+                <div class="banner_line" style="width:95%;margin-left:2.5%;margin-bottom:1em;margin-top:1em;"></div>
+                <h2 id="Paintings">Paintings</h2>
                     <div class="grid-container">
                         <div class="grid-item"><img src="resources/gallery/sunset_stroll.JPG" alt="image" class="gallery_image"></div>
                         <div class="grid-item"><img src="resources/gallery/dog.JPG" alt="image" class="gallery_image"></div>
                         <div class="grid-item"><img src="resources/gallery/wallaby.JPG" alt="image" class="gallery_image"></div>
                         <div class="grid-item"><img src="resources/gallery/sunset2.JPG" alt="image" class="gallery_image"></div>
                     </div> 
-                <h2>Other artistic</h2>
+                <div class="banner_line" style="width:95%;margin-left:2.5%;margin-bottom:1em;margin-top:1em;"></div>
+                <h2 id="Other artistic">Other artistic</h2>
                     <div class="grid-container">
                         <div class="grid-item"><img src="resources/gallery/jewellery.JPG" alt="image" class="gallery_image"></div>
+                        <div class="grid-item"><img src="resources/gallery/map1.JPG" alt="image" class="gallery_image"></div>
                     </div> 
             </div>
             
         </div>
     </body>
+    <script src="banner.js"></script>
 </html>

@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f5eb;
+    margin:0;
+}
+a {
+    color:rgb(201, 65, 65);
+    text-decoration:none;
+}
+a:hover {
+    color:rgb(87, 51, 196);
+    text-decoration:none;
+}
+#top_banner {
+    font-size:2.5em;
+    text-align:center;
+    padding:0px;
+    position:relative;
+}
+#top_banner > canvas {
+    position:absolute;
+    left:0;
+    top:0;
+}
+#top_banner img {
+    width:100%;
+}
+#banner {
+    width: 80%; 
+    margin-left:10%;
+}
+.banner_text {
+    float:left;
+    margin-left:10%;
+    font-size:1.2em;
+    padding-bottom:10px;
+    padding-top:10px;
+    color:rgb(69, 69, 69);
+    text-decoration:none;
+}
+.banner_text:hover {
+    float:left;
+    margin-left:10%;
+    font-size:1.2em;
+    padding-bottom:10px;
+    padding-top:10px;
+    color:rgb(155, 137, 39);
+    text-decoration:none;
+}
+.banner_line {
+    background-color:rgb(49, 49, 49);
+    width:80%;
+    height:0.05em;
+    float:left;
+    margin-left:10%
+}
+#main {
+    width:80%;
+    float:left;
+    margin-left:10%;
+    background-color: white;
+}
+#main_text {
+    width:90%;
+    margin-left:5%;
+    margin-top:2em;
+    font-size:1.1em;
+}
+#home_banner_img {
+    width:100%;
+    margin-top:1em;
+}
+#gallery {
+    width: 90%;
+    margin-left:5%;
+}
+.gallery_image {
+    width:20em;
+    margin-left:2em;
+}
