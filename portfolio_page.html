@@ -15,7 +15,7 @@
                 margin-left:2em;
             }
             #p_image {
-                width:30%;
+                width:50%;
             }
         </style>
     </head>
@@ -45,6 +45,7 @@
     </body>
 
     <script>
+        p_id = "";
         function GetID() {
             var param = "id";
             var pageURL = window.location.search.substring(1);
@@ -54,7 +55,7 @@
                 var paramName = urlVars[i].split('=');
                 if (paramName[0] == param) 
                 {
-                    console.log(paramName[1]);
+                    p_id = paramName[1];
                     loadXMLDoc();
                 }
             }
@@ -79,7 +80,7 @@
             for (i = 0; i< x.length; i++) {
                 for (j = 0; j < x[i].childNodes.length; j++) {
                     if (x[i].childNodes[j].nodeName == "id") {
-                        if (x[i].childNodes[j].innerHTML == "0") {
+                        if (x[i].childNodes[j].innerHTML == p_id) {
                             found_correct_item = true;
                             console.log("found");
                             break;
