@@ -69,12 +69,27 @@
 
         function displayInfo(xml) {
             var xmlDoc = xml.responseXML;
-            var txt = "";
             var x = xmlDoc.getElementsByTagName("item");
+            found_correct_item = false;
             for (i = 0; i< x.length; i++) {
-                console.log(x[i].childNodes);
+                for (j = 0; j < x[i].childNodes.length; j++) {
+                    if (x[i].childNodes[j].nodeName == "id") {
+                        if (x[i].childNodes[j].innerHTML == "0") {
+                            found_correct_item = true;
+                            console.log("found");
+                            break;
+                        }
+                    }
+                }
+                if (found_correct_item) {
+                    for (j = 0; j < x[i].childNodes.length; j++) {
+                        if (x[i].childNodes[j].nodeName == "title") {
+                            document.getElementById("p_name").innerHTML = x[i].childNodes[j].innerHTML;
+                        }
+                    }
+                    break;
+                }
             }
-            document.getElementById("p_name").innerHTML = x;
         }
     </script>
     <script src="banner.js"></script>
