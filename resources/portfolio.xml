@@ -19,4 +19,13 @@
     The article was generally about artificial intelligence, and I thought it would be helpful to have a nice illustrative gif of a classic
     AI problem - recognising digits. I created this animation using Pytorch and Manim.</description>
   </item>
+  <item>
+    <id>2</id>
+    <title>Simulation of double pendulums</title>
+    <date>2022</date>
+    <imagelink>resources/gallery/pendulum.gif</imagelink>
+    <techniques>Python: matplotlib, numpy. Mathematical modelling. ODEs. </techniques>
+    <description>I created this for an article I wrote on Medium about beautiful mathematics for everyday life. I wanted to illustrate some
+    chaotic behaviour - so I chose to create an animation of double pendulums.</description>
+  </item>
 </portfolio> 
