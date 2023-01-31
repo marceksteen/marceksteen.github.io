@@ -31,11 +31,10 @@
         <div id="main">
             <div id="main_text">
                 <h1 id="p_name">Name</h1>
-                <img src="not_found.png">
+                <img id="p_image" src="not_found.png">
                 <p id="p_date">Date goes here..</p>
                 <p id="p_techniques">Techniques go here..</p>
                 <p id="p_description">Description goes here..</p>
-                <p id="demo"></p>
         </div>
     </body>
 
@@ -85,6 +84,18 @@
                     for (j = 0; j < x[i].childNodes.length; j++) {
                         if (x[i].childNodes[j].nodeName == "title") {
                             document.getElementById("p_name").innerHTML = x[i].childNodes[j].innerHTML;
+                        }
+                        if (x[i].childNodes[j].nodeName == "date") {
+                            document.getElementById("p_date").innerHTML = x[i].childNodes[j].innerHTML;
+                        }
+                        if (x[i].childNodes[j].nodeName == "imagelink") {
+                            document.getElementById("p_image").src = x[i].childNodes[j].innerHTML;
+                        }
+                        if (x[i].childNodes[j].nodeName == "techniques") {
+                            document.getElementById("p_techniques").innerHTML = x[i].childNodes[j].innerHTML;
+                        }
+                        if (x[i].childNodes[j].nodeName == "description") {
+                            document.getElementById("p_description").innerHTML = x[i].childNodes[j].innerHTML;
                         }
                     }
                     break;
