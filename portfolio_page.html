@@ -70,7 +70,7 @@
             var x, i, xmlDoc, txt;
             xmlDoc = xml.responseXML;
             txt = "";
-            x = xmlDoc.getElementsByTagName("ITEM");
+            x = xmlDoc.getElementsByTagName("item");
             for (i = 0; i< x.length; i++) {
                 txt += x[i].childNodes[0].nodeValue + "<br>";
             }
