@@ -60,8 +60,6 @@
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     //retrieved info
-                    console.log("done");
-                    console.log(this);
                     displayInfo(this);
                 }
             };
@@ -74,7 +72,7 @@
             var txt = "";
             var x = xmlDoc.getElementsByTagName("item");
             for (i = 0; i< x.length; i++) {
-                console.log(x[i].childNodes[1].nodeValue);
+                console.log(x[i].childNodes);
             }
             document.getElementById("p_name").innerHTML = x;
         }
