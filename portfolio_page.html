@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+        <style>
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+            }
+            .grid-item {
+            }
+            .gallery_image {
+                width:90%;
+                margin-left:10%;
+                margin-left:2em;
+            }
+        </style>
+    </head>
+    <body onload = "GetID();init();">
+        <div id="top_banner">
+            <canvas id = "background_canvas" width = "100" height = "100"></canvas>
+            <img src="resources/city_banner.PNG" id="city_banner">
+            <canvas id = "active_canvas" width = "100" height = "100"></canvas>
+        </div>
+        <div id="banner">
+            <a class="banner_text" href="index.html">Home</a>
+            <a class="banner_text" href="portfolio.html">Portfolio</a>
+            <a class="banner_text" href="https://medium.com/@marc.eksteen">Medium</a>
+        </div>
+        <div class="banner_line"></div>
+        <div id="main">
+            <div id="main_text">
+                <h1 id="p_name">Name</h1>
+                <img src="not_found.png">
+                <p id="p_date">Date goes here..</p>
+                <p id="p_techniques">Techniques go here..</p>
+                <p id="p_description">Description goes here..</p>
+                <p id="demo"></p>
+        </div>
+    </body>
+    <script>
+        function GetID() {
+            var param = "id";
+            var pageURL = window.location.search.substring(1);
+            var urlVars = pageURL.split('&');
+            for (var i = 0; i < urlVars.length; i++) 
+            {
+                var paramName = urlVars[i].split('=');
+                if (paramName[0] == param) 
+                {
+                    console.log(paramName[1]);
+                    loadXMLDoc();
+                }
+            }
+        }
+
+        function loadXMLDoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    //retrieved info
+                    displayInfo(this);
+                }
+            };
+            xmlhttp.open("GET", "resources/portfolio.xml", true);
+            xmlhttp.send();
+            }
+
+        function displayInfo(xml) {
+            var x, i, xmlDoc, txt;
+            xmlDoc = xml.responseXML;
+            txt = "";
+            x = xmlDoc.getElementsByTagName("ITEM");
+            for (i = 0; i< x.length; i++) {
+                txt += x[i].childNodes[0].nodeValue + "<br>";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+    <script src="banner.js"></script>
+</html>

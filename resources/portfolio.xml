@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portfolio>
+  <item>
+    <id>0</id>
+    <title>Monty Hall Simulation</title>
+    <date>2023</date>
+    <imagelink></imagelink>
+    <techniques>Python, probability simulation</techniques>
+    <description>Built something cool</description>
+  </item>
+</portfolio> 
