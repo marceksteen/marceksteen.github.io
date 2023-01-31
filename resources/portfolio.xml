@@ -8,4 +8,12 @@
     <techniques>Python, probability simulation</techniques>
     <description>Built something cool</description>
   </item>
+  <item>
+    <id>1</id>
+    <title>CNN for digit recognition</title>
+    <date>2023</date>
+    <imagelink></imagelink>
+    <techniques>Python, probability simulation</techniques>
+    <description>Built something cool</description>
+  </item>
 </portfolio> 
