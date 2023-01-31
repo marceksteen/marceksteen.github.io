@@ -46,6 +46,7 @@
 
     <script>
         p_id = "";
+        //get the id from the page url
         function GetID() {
             var param = "id";
             var pageURL = window.location.search.substring(1);
@@ -61,6 +62,7 @@
             }
         }
 
+        //retrieve the XML doc
         function loadXMLDoc() {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
@@ -72,7 +74,8 @@
             xmlhttp.open("GET", "resources/portfolio.xml", true);
             xmlhttp.send();
             }
-
+        
+        //find the correct info to display on the page, using the id from the URL
         function displayInfo(xml) {
             var xmlDoc = xml.responseXML;
             var x = xmlDoc.getElementsByTagName("item");
