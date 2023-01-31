@@ -38,6 +38,7 @@
                 <p id="demo"></p>
         </div>
     </body>
+
     <script>
         function GetID() {
             var param = "id";
@@ -59,6 +60,8 @@
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     //retrieved info
+                    console.log("done");
+                    console.log(this);
                     displayInfo(this);
                 }
             };
