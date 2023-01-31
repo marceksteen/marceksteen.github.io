@@ -5,15 +5,18 @@
     <title>Monty Hall Simulation</title>
     <date>2023</date>
     <imagelink>resources/gallery/monty.png</imagelink>
-    <techniques>Python, probability simulation</techniques>
-    <description>Built something cool</description>
+    <techniques>Probability simulation. Python: matplotlib, numpy.</techniques>
+    <description>Created a simulation of the Monty Hall problem for an article I wrote on Medium. Most of the work honestly went into making
+    the graph look nice. I wanted it to match the colour scheme of the other diagrams in the article. </description>
   </item>
   <item>
     <id>1</id>
     <title>CNN for digit recognition</title>
-    <date>2023</date>
-    <imagelink></imagelink>
-    <techniques>Python, probability simulation</techniques>
-    <description>Built something cool</description>
+    <date>2022</date>
+    <imagelink>resources/gallery/ml.gif</imagelink>
+    <techniques>Python: pytorch, manim. Convolutional neural networks. </techniques>
+    <description>I wanted to create a nice animated diagram of a CNN (convolutional neural network) for an article I wrote on Medium.
+    The article was generally about artificial intelligence, and I thought it would be helpful to have a nice illustrative gif of a classic
+    AI problem - recognising digits. I created this animation using Pytorch and Manim.</description>
   </item>
 </portfolio> 
