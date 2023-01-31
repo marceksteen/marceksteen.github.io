@@ -4,7 +4,7 @@
     <id>0</id>
     <title>Monty Hall Simulation</title>
     <date>2023</date>
-    <imagelink></imagelink>
+    <imagelink>resources/gallery/monty.png</imagelink>
     <techniques>Python, probability simulation</techniques>
     <description>Built something cool</description>
   </item>

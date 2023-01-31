@@ -70,14 +70,13 @@
             }
 
         function displayInfo(xml) {
-            var x, i, xmlDoc, txt;
-            xmlDoc = xml.responseXML;
-            txt = "";
-            x = xmlDoc.getElementsByTagName("title");
+            var xmlDoc = xml.responseXML;
+            var txt = "";
+            var x = xmlDoc.getElementsByTagName("item");
             for (i = 0; i< x.length; i++) {
-                txt += x[i].childNodes[0].nodeValue + "<br>";
+                console.log(x[i].childNodes[1].nodeValue);
             }
-            document.getElementById("demo").innerHTML = txt;
+            document.getElementById("p_name").innerHTML = x;
         }
     </script>
     <script src="banner.js"></script>
