@@ -33,8 +33,8 @@ function SetupBackground() {
     back_ctx.beginPath();
     back_ctx.moveTo(0, 0.99*c.height);
     back_ctx.lineTo(c.width, 0.99*c.height);
-    back_ctx.moveTo(0, 0.85*c.height);
-    back_ctx.lineTo(c.width, 0.85*c.height);
+    // back_ctx.moveTo(0, 0.85*c.height);
+    // back_ctx.lineTo(c.width, 0.85*c.height);
 
     back_ctx.stroke();
     return;
