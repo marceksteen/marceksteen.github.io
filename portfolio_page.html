@@ -22,7 +22,7 @@
             }
         </style>
     </head>
-    <body onload = "GetID();init();">
+    <body>
         <div id="top_banner">
             <canvas id = "background_canvas" width = "100" height = "100"></canvas>
             <img src="resources/city_banner.PNG" id="city_banner">
@@ -32,6 +32,7 @@
             <a class="banner_text" href="index.html">Home</a>
             <a class="banner_text" href="portfolio.html">Portfolio</a>
             <a class="banner_text" href="https://medium.com/@marc.eksteen">Medium</a>
+            <a class="banner_text" href="apps.html">Apps</a>
         </div>
         <div class="banner_line"></div>
         <div id="main">
@@ -48,6 +49,8 @@
     </body>
 
     <script>
+        GetID();
+
         p_id = "";
         //get the id from the page url
         function GetID() {

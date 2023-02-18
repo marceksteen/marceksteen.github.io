@@ -9,6 +9,8 @@ var car = new Image()
 var last_spawn_time = 0;
 var time_between_spawn = 10;
 
+init();
+
 function init() {
     ctx.imageSmoothingEnabled = false;
 

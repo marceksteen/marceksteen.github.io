@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet"> 
+        <style>
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+            }
+            .grid-item {
+            }
+            .gallery_image {
+                width:90%;
+                margin-left:10%;
+                margin-left:2em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="top_banner">
+            <canvas id = "background_canvas" width = "100" height = "100"></canvas>
+            <img src="resources/city_banner.PNG" id="city_banner">
+            <canvas id = "active_canvas" width = "100" height = "100"></canvas>
+        </div>
+        <div id="banner">
+            <a class="banner_text" href="index.html">Home</a>
+            <a class="banner_text" href="portfolio.html">Portfolio</a>
+            <a class="banner_text" href="https://medium.com/@marc.eksteen">Medium</a>
+            <a class="banner_text" href="apps.html">Apps</a>
+        </div>
+        <div class="banner_line"></div>
+        <div id="main">
+            <div id="main_text">
+                <h1>Apps</h1>
+                <p>Here are a couple of random web apps which may or may not work (NOTE: this page is still a work in progress - I've only included one app so far): <br><br>
+                &emsp;- <a href="decimal.html">Digit art</a> <br>
+                </p>
+            </div>
+            
+        </div>
+    </body>
+    <script src="banner.js"></script>
+</html>
