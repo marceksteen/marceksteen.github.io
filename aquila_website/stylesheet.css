@@ -21,6 +21,16 @@ body {
     position:relative;
     z-index:1;
 }
+
+@media (max-width: 500px) {
+    #top_container {
+        height:40vh;
+    }
+    #stars {
+        height:40vh;
+    }
+}
+
 #bottom_container {
     height:100vw;
     background:#8495f4;
