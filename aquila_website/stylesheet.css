@@ -121,6 +121,7 @@ body {
 #info2 p {
     margin:0;
     margin-left:20vw;
+    width:60vw;
     font-family: 'Oswald', sans-serif;
     font-weight:300;
 }
