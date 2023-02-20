@@ -38,7 +38,7 @@ var star_pos = []
 for (i = 0; i < numOfStars; i++) {
     this_star_pos = [];
     this_star_pos[0] = Math.random()*c.width;
-    this_star_pos[1] = 0.6*Math.random()*c.height;
+    this_star_pos[1] = Math.random()*c.height;
     star_pos[i] = this_star_pos;
 }
 
@@ -65,7 +65,7 @@ function update() {
         star_pos[i][0] += 0.2;
         star_pos[i][1] += 0.2;
 
-        if (star_pos[i][0] > c.width || star_pos[i][0] < 0 || star_pos[i][1] > 0.6*c.height || star_pos[i][1] < 0) {
+        if (star_pos[i][0] > c.width || star_pos[i][0] < 0 || star_pos[i][1] > c.height || star_pos[i][1] < 0) {
             if (Math.random() > 0.5) {
                 star_pos[i][0] = 0;
                 star_pos[i][1] = Math.random()*c.height;
