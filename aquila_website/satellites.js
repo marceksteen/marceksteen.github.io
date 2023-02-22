@@ -62,8 +62,8 @@ function update() {
         ctx.fill(); 
 
         //update position
-        star_pos[i][0] += 0.2;
-        star_pos[i][1] += 0.2;
+        star_pos[i][0] += 0.05;
+        star_pos[i][1] += 0.05;
 
         if (star_pos[i][0] > c.width || star_pos[i][0] < 0 || star_pos[i][1] > c.height || star_pos[i][1] < 0) {
             if (Math.random() > 0.5) {
