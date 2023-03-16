@@ -55,6 +55,7 @@
         p_id = "";
         //get the id from the page url
         function GetID() {
+            console.log("test1");
             var param = "id";
             var pageURL = window.location.search.substring(1);
             var urlVars = pageURL.split('&');
@@ -75,6 +76,7 @@
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     //retrieved info
+                    console.log("test2");
                     displayInfo(this);
                 }
             };
