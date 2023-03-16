@@ -65,19 +65,18 @@
                 if (paramName[0] == param) 
                 {
                     p_id = paramName[1];
-                    loadXMLDoc();
+                    loadXMLDoc(p_id);
                 }
             }
         }
 
         //retrieve the XML doc
-        function loadXMLDoc() {
-            console.log(p_id);
+        function loadXMLDoc(pid) {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     //retrieved info
-                    displayInfo(this);
+                    displayInfo(this, pid);
                 }
             };
             xmlhttp.open("GET", "resources/portfolio.xml", true);
@@ -85,7 +84,7 @@
             }
         
         //find the correct info to display on the page, using the id from the URL
-        function displayInfo(xml) {
+        function displayInfo(xml, p_id) {
             var xmlDoc = xml.responseXML;
             var x = xmlDoc.getElementsByTagName("item");
             found_correct_item = false;
