@@ -91,6 +91,7 @@
             found_correct_item = false;
             for (i = 0; i< x.length; i++) {
                 for (j = 0; j < x[i].childNodes.length; j++) {
+                    console.log(x[i].childNodes[j]);
                     if (x[i].childNodes[j].nodeName == "id") {
                         if (x[i].childNodes[j].innerHTML == p_id) {
                             found_correct_item = true;
