@@ -84,9 +84,9 @@
         
         //find the correct info to display on the page, using the id from the URL
         function displayInfo(xml) {
-            console.log(xml);
             var xmlDoc = xml.responseXML;
             var x = xmlDoc.getElementsByTagName("item");
+            console.log(x);
             found_correct_item = false;
             for (i = 0; i< x.length; i++) {
                 for (j = 0; j < x[i].childNodes.length; j++) {
