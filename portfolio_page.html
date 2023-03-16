@@ -93,6 +93,8 @@
                 for (j = 0; j < x[i].childNodes.length; j++) {
                     if (x[i].childNodes[j].nodeName == "id") {
                         console.log(x[i].childNodes[j].innerHTML);
+                        console.log(p_id);
+                        console.log(p_id == x[i].childNodes[j].innerHTML);
                         if (x[i].childNodes[j].innerHTML.toString() == p_id.toString()) {
                             found_correct_item = true;
                             console.log("found");
