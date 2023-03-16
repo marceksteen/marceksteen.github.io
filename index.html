@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=block" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=block" rel="stylesheet"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     </head>
     <body>
         <div id="top_banner">
@@ -49,10 +50,21 @@
                 <img src="resources/gallery/wallaby.JPG" alt="image" class="gallery_image">
                 <img src="resources/gallery/dog.JPG" alt="image" class="gallery_image">
                 <img src="resources/gallery/jewellery.JPG" alt="image" class="gallery_image">
-                <img src="resources/gallery/sunset_stroll.JPG" alt="image" class="gallery_image">
+                <img src="resources/gallery/sunset_stroll.JPG" alt="image" class="gallery_image" id="test">
             </div>
         </div>
     </body>
     <script src="banner.js"></script>
+    <script src="viewport_checker.js"></script>
+    <script>
+
+    $('.gallery_image').fadeOut("fast");
+
+    $(window).on('resize scroll', function() {
+    if ($('.gallery_image').in_viewport()) {
+        $('.gallery_image').fadeIn("slow");
+    }
+    });
+    </script>
 
 </html>
