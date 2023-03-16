@@ -34,20 +34,14 @@ a:hover {
 .banner_text {
     float:left;
     margin-left:10%;
-    font-size:1.2em;
-    padding-bottom:10px;
-    padding-top:10px;
+    font-size:1.7em;
+    padding-bottom:2px;
+    padding-top:2px;
     color:rgb(245, 245, 245);
     text-decoration:none;
-    font-family: 'Open Sans', sans-serif;
-    font-weight:700;
+    font-family: 'Pacifico', cursive;
 }
 .banner_text:hover {
-    float:left;
-    margin-left:10%;
-    font-size:1.2em;
-    padding-bottom:10px;
-    padding-top:10px;
     color:rgb(247, 175, 136);
     text-decoration:none;
 }
