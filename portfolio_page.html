@@ -72,6 +72,7 @@
 
         //retrieve the XML doc
         function loadXMLDoc() {
+            console.log("p_id");
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
@@ -87,11 +88,9 @@
         function displayInfo(xml) {
             var xmlDoc = xml.responseXML;
             var x = xmlDoc.getElementsByTagName("item");
-            console.log(x);
             found_correct_item = false;
-            for (i = 0; i< x.length; i++) {
+            for (i = 0; i < x.length; i++) {
                 for (j = 0; j < x[i].childNodes.length; j++) {
-                    console.log(x[i].childNodes[j]);
                     if (x[i].childNodes[j].nodeName == "id") {
                         if (x[i].childNodes[j].innerHTML == p_id) {
                             found_correct_item = true;
