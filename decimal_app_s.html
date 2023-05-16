@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Marc Eksteen</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=block" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=block" rel="stylesheet"> 
+        <style>
+            #main_svg {
+            }
+            #number_text {
+                z-index:1;
+                top:80px;
+                color:#f4f4f4;
+                font-size: 100px;
+            }
+            #name_text {
+                font-family:Verdana,sans-serif;
+                position:absolute;
+                z-index:1;
+                left:690px;
+                top:500px;
+                color:#ededed;
+                font-size: 10px;  
+            }
+            #main {
+                background-color:rgb(51, 51, 51); 
+                height:auto;
+            }
+            #input_section {
+                display:table;
+                margin-left:30%;
+            }
+            .input_item {
+                display:table-cell;
+            }
+            #input_instruction {
+                color:#f4f4f4;
+                font-size:2vw;
+            }
+            #input_box {
+                background-color:rgb(51, 51, 51);
+                color:#f4f4f4;
+                border-bottom-color:#f4f4f4;
+                border-top:0;
+                border-right:0;
+                border-left:0;
+                font-size:2vw;
+                width:50%;
+                font-family: 'Open Sans', sans-serif;
+                text-align:center;
+            }
+            #input_box:focus {
+                outline:none;
+            }
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                opacity: 1;
+                transition: opacity 0.5s ease-in-out;
+                z-index: 2;
+            }
+        </style> 
+    </head>
+    <body>
+        <div class="overlay"></div>
+        <div class="banner_line"></div>
+        <div id="main">
+            <div id="main_text" style="margin:0;width:100%">
+                <div style="width:100%;background-color:rgb(255, 249, 236)">
+                    <h1 style="color:rgb(51, 51, 51);padding:0.5em;margin:0">Decimal art</h1>
+                    <p style="color:rgb(51, 51, 51);padding:1em">This tool makes nice little diagrams of the decimal expansions of the input number. For example, Pi would display with lines connecting
+                        3 to 1 to 4 and so on. I'm not sure of the practical application of this tool (probably limited to none), but I found it fun to make, and I 
+                        find some of the patterns produced quite fascinating. Some random ideas for you to try: pi, 1/47, sqrt(2)/log(3). I personally find that
+                        fractions make the nicest images, because of the patterns they produce. Try 1/7, 1/19 or maybe 1/123. Maybe have a think why the patterns are produced
+                        the way they are :)
+                    </p>
+                </div>
+                <svg id="main_svg" width="1024" height="500"></svg>
+                <div id="input_section" style="display:table">
+                    <p class="input_item" id="input_instruction">Show me </p>
+                    <div style="width:1em" class="input_item"></div>
+                    <input type="text" class="input_item" id="input_box" placeholder="1/26" onchange = "UserInput();"
+                    onkeypress = "this.onchange();"
+                    onpaste    = "this.onchange();"
+                    oninput    = "this.onchange();">
+                </div>
+                <div style="height:2em;width:100%;"></div>
+            </div>
+        </div>
+    </body>
+</html> 
+
+<!-- Fade in -->
+<script>
+window.addEventListener('load', function() {
+    var overlay = document.querySelector('.overlay');
+    overlay.style.opacity = 0;
+    setTimeout(function() {
+    overlay.style.display = 'none';
+    }, 500);
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.1/math.js"></script> <!-- mathjs -->
+<!--<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> no longer sure what this is for -->
+<script src="banner.js"></script>
+
+<!-- Decimal art script -->
+<script src="decimal.js"></script>
