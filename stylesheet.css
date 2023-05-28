@@ -76,3 +76,17 @@ a:hover {
     width:20em;
     margin-left:2em;
 }
+
+@media only screen and (max-width:1000px) {
+    .banner_text {
+        font-size:4vw;
+    }
+    #main {
+        width:100%;
+        margin-left:0;
+    }
+    #banner {
+        width:100%;
+        margin-left:0;
+    }
+}
