@@ -1,7 +1,7 @@
 body {
     padding:0px;
     margin:0px;
-    background: rgb(128, 218, 128);
+    background: rgb(23,45,62);
 }
 .container {
     background: rgb(23,45,62);
@@ -155,7 +155,13 @@ body {
     height:0;
 }
 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width:1000px) {
+    #top_section {
+        height:3em;
+    }
+    #top_section > h1 {
+        font-size:1.5em;
+    }
     #second_row {
         flex-direction: column;
     }
@@ -194,5 +200,6 @@ body {
         height:auto;
         margin-left:5vw;
         margin-bottom:0;
+        font-size:3em;
     }
 }
