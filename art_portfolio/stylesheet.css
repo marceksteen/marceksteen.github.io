@@ -155,7 +155,7 @@ body {
     height:0;
 }
 
-@media (max-width:800px) {
+@media (max-width:50em) {
     #second_row {
         flex-direction: column;
     }
