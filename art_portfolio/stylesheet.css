@@ -1,7 +1,7 @@
 body {
     padding:0px;
     margin:0px;
-    background: rgb(140, 180, 210);
+    background: rgb(128, 218, 128);
 }
 .container {
     background: rgb(23,45,62);
@@ -155,7 +155,7 @@ body {
     height:0;
 }
 
-@media only screen and (max-width:50em) {
+@media only screen and (max-width:1200px) {
     #second_row {
         flex-direction: column;
     }
