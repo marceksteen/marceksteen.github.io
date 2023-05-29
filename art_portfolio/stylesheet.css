@@ -19,7 +19,7 @@ body {
     font-family: 'Righteous', cursive;
     color: #172d3e;
     position:fixed;
-    z-index:10;
+    z-index:100;
     top:0;
 }
 #top_section > h1 {
@@ -86,7 +86,7 @@ body {
     color:rgba(255,213,122,1);
 }
 #shop_link:hover {
-    color:rgb(228, 246, 194);
+    color:rgb(255, 241, 211);
 }
 
 
