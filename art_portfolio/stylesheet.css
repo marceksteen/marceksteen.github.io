@@ -20,6 +20,7 @@ body {
     color: #172d3e;
     position:fixed;
     z-index:10;
+    top:0;
 }
 #top_section > h1 {
     margin-top:0;
@@ -61,6 +62,33 @@ body {
         -o-animation: shrink 2s; /* Opera < 12.1 */
             animation: shrink 2s;
 }
+
+#bottom_text {
+    margin-top:80vh;
+    margin-left:6vw;
+    position:fixed;
+    z-index:10;
+    font-size:1.2em;
+
+    -webkit-animation: fadeIn 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeIn 3s; /* Firefox < 16 */
+        -ms-animation: fadeIn 3s; /* Internet Explorer */
+        -o-animation: fadeIn 3s; /* Opera < 12.1 */
+            animation: fadeIn 3s;
+}
+#bottom_text_link {
+    color:rgba(34,193,195,1);
+}
+#bottom_text_link:hover {
+    color:rgb(183, 225, 255);
+}
+#shop_link {
+    color:rgba(255,213,122,1);
+}
+#shop_link:hover {
+    color:rgb(228, 246, 194);
+}
+
 
 @keyframes shrink {
     from { font-size:15vw; }
@@ -155,6 +183,7 @@ body {
     height:0;
 }
 
+
 @media only screen and (max-width:1000px) {
     #top_section {
         height:3em;
@@ -182,12 +211,15 @@ body {
         -o-animation: none; /* Opera < 12.1 */
         animation: none;
         opacity:0;
-        height:0;
+        height:0px;
+        margin:0;
+        width:0;
     }
     #description_container {
         position:relative;
         width:100%;
         margin-top:0;
+        margin-bottom:0;
     }
     .container {
         background: rgb(23,45,62);
@@ -201,5 +233,11 @@ body {
         margin-left:5vw;
         margin-bottom:0;
         font-size:3em;
+    }
+    #bottom_text {
+        margin-top:0;
+        text-align:right;
+        position:relative;
+        width:100%;
     }
 }
