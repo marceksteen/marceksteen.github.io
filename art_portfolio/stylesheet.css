@@ -201,6 +201,11 @@ body {
 }
 .gallery_image {
     width:100%;
+    transition:0.3s;
+}
+.gallery_image:hover {
+    opacity:0.8;
+    width:98%;
 }
 #portfolio_title {
     margin-right:2em;
