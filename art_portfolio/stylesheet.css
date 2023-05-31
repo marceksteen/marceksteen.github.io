@@ -28,6 +28,18 @@ body {
     font-size:1em;
     margin-right:1.5%;
 }
+#back_button {
+    position:fixed;
+    left:0;
+    top: 0;
+    margin-top:0;
+    margin-left:0.5em;
+    text-decoration: none;
+    color:#172d3e;
+}
+#back_button:hover {
+    color:#ffffff;
+}
 #second_row {
     padding-top: 1.5em;
     display:flex;
@@ -68,7 +80,7 @@ body {
     margin-left:6vw;
     position:fixed;
     z-index:10;
-    font-size:1.2em;
+    font-size:1.3vw;
 
     -webkit-animation: fadeIn 3s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadeIn 3s; /* Firefox < 16 */
@@ -76,17 +88,36 @@ body {
         -o-animation: fadeIn 3s; /* Opera < 12.1 */
             animation: fadeIn 3s;
 }
+#small_screen_bottom_text {
+    display:none;
+}
 #bottom_text_link {
     color:rgba(34,193,195,1);
+    border:rgba(34,193,195,1);
+    border-style:solid;
+    border-width:1px;
+    padding:3px;
 }
 #bottom_text_link:hover {
     color:rgb(183, 225, 255);
+    border:rgb(183, 225, 255);
+    border-style:solid;
+    border-width:1px;
+    padding:3px;
 }
 #shop_link {
     color:rgba(255,213,122,1);
+    border:rgba(255,213,122,1);
+    border-style:solid;
+    border-width:1px;
+    padding:3px;
 }
 #shop_link:hover {
     color:rgb(255, 241, 211);
+    border:rgb(255, 241, 211);
+    border-style:solid;
+    border-width:1px;
+    padding:3px;
 }
 
 
@@ -226,11 +257,15 @@ body {
         margin-top:0.2em;
         font-size:1.5em;
     }
+    #back_button {
+        font-size:1.5em;
+        margin-top:0.2em;
+    }
     #second_row {
         flex-direction: column;
     }
     #second_left {
-        width:80%;
+        width:100%;
     }
     #second_right {
         width:100%;
@@ -252,9 +287,11 @@ body {
     }
     #description_container {
         position:relative;
-        width:100%;
+        width:95%;
         margin-top:0;
         margin-bottom:0;
+        margin-left:0;
+        padding:1vw;
     }
     .container {
         background: rgb(23,45,62);
@@ -270,10 +307,30 @@ body {
         font-size:3em;
     }
     #bottom_text {
-        margin-top:0;
-        text-align:right;
-        position:relative;
+        display:none;
+    }
+    #small_screen_bottom_text {
+        display:block;
+        margin-top:3em;
+        margin-left:3vw;
+        font-size:3.5vw;
         width:100%;
+
+        -webkit-animation: fadeIn 3s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadeIn 3s; /* Firefox < 16 */
+            -ms-animation: fadeIn 3s; /* Internet Explorer */
+            -o-animation: fadeIn 3s; /* Opera < 12.1 */
+                animation: fadeIn 3s;
+    }
+    #bottom_text_link {
+        border:rgba(34,193,195,0.75);
+        border-style:solid;
+        padding:0.1em;
+    }
+    #shop_link {
+        border:rgba(255,213,122,1);
+        border-style:solid;
+        padding:0.1em;
     }
     #gallery {
         margin-top:2.5em;
