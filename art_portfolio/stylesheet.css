@@ -248,6 +248,25 @@ body {
     font-size:2em;
 }
 
+.main_content {
+    margin-top:2.5em;
+    padding:1em;
+    margin-left:10%;
+    width:80%;
+    background-color:rgb(23,45,62);
+    color:white;
+    font-family:'Open Sans', sans-serif;
+    text-align:center;
+    min-height:80vh;
+}
+
+.main_content > h2 {
+    font-family:'Righteous',cursive;
+}
+
+#profile_image {
+    width:25vw;
+}
 
 @media only screen and (max-width:1000px) {
     #top_section {
@@ -337,5 +356,13 @@ body {
     }
     .gallery_row {
         flex-direction:column;
+    }
+    #mc_embed_signup{
+        padding:1em;
+        width:90%;
+        margin-left:2%;
+    }
+    #mce-EMAIL {
+        width:60%;
     }
 }
