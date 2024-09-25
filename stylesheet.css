@@ -75,6 +75,9 @@ a:hover {
 .gallery_image {
     width:20em;
     margin-left:2em;
+    border-width:2px;
+    border-color:black;
+    border-style:solid;
 }
 
 @media only screen and (max-width:1000px) {

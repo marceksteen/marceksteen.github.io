@@ -17,7 +17,9 @@
     <techniques>Python: pytorch, manim. Convolutional neural networks. </techniques>
     <description>I wanted to create a nice animated diagram of a CNN (convolutional neural network) for an article I wrote on Medium.
     The article was generally about artificial intelligence, and I thought it would be helpful to have a nice illustrative gif of a classic
-    AI problem - recognising digits. I created this animation using Pytorch and Manim.</description>
+    AI problem - recognising digits. I created this animation using Pytorch and Manim. If you look carefully, you'll notice how the input - 
+    a hand-drawn digit, 7, feeds information forward through the layers of the neural network. The network correctly classifies the digit
+    as a seven - although you'll notice it also very vaguely thinks it might be a 2, which makes sense.</description>
   </item>
   <item>
     <id>2</id>
@@ -26,6 +28,8 @@
     <imagelink>resources/gallery/pendulum.gif</imagelink>
     <techniques>Python: matplotlib, numpy. Mathematical modelling. ODEs. </techniques>
     <description>I created this for an article I wrote on Medium about beautiful mathematics for everyday life. I wanted to illustrate some
-    chaotic behaviour - so I chose to create an animation of double pendulums.</description>
+    chaotic behaviour - so I chose to create an animation of double pendulums. Double pendulums are fascinating, because they demonstrate chaos 
+    so clearly. With just the slightest of differences in the starting momentums and angles of the two pendulums, their behaviour diverges
+    incredibly quickly. So it is with many things in the world.</description>
   </item>
 </portfolio> 
